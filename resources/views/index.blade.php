@@ -55,7 +55,7 @@
       <a class="link" href="#">Lees verder</a>
     </div>
     <div class="photo">
-      <img class="photo-exl" src="{{ asset('storage/'.$news->image) }}">
+      <img class="photo-exl" src="{{ asset('storage/'.$news->image) }}" width="11em">
     </div>
   @else
     <div class="cart-message">Geen news</div>

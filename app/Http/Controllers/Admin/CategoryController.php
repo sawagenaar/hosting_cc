@@ -88,8 +88,9 @@ class CategoryController extends Controller
         $category = Category::find($slug);
         // Controle van fotobestaan
         if(request()->hasFile('image') && request('image') != '') {
-            $imagepath = ('storage/images.categories/'.$category->image);
+            $imagepath = ('storage/'.$category->image);
             // Als de oude foto bestaat en zich in de storage map bevindt, wordt deze foto verwijderd
+            // dd($imagepath);
             if(!is_null($category->image) && Storage::exists($category->image)) {
                 unlink($imagepath);
             }

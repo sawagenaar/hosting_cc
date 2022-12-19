@@ -12,7 +12,7 @@
 </div>
 <div class="product">
   <div class="product-photo">
-    <img class="photo-exl" src="{{ asset('storage/'.$product->image) }}">
+    <img class="photo-exxl" src="{{ asset('storage/'.$product->image) }}">
   </div>
   <div class="product-description">
     <h2 class="subtitle">{{ $product->name }}</h2>
