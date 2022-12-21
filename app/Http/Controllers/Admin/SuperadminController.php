@@ -65,6 +65,10 @@ class SuperadminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = User::find($id);
+        // Een user verwijderen
+        $order->delete();
+        // Redirect naar de pagina van de users
+        return redirect()->route('superadmin.admin.index')->with('success', 'User verwijderd');
     }
 }
